@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>JavaScrip</title>
+
+</head>
+<body>
+
+<h1>Oque é JavaScrip</h1>
+<p>É uma linguagem de alto nivel, interpratada por palavras em inguel mais proximo possivel da linguagem humana, e é um linguem que se utiliza em "client side", somente em browsers. O HTML e o CSS somente permite uma interação grafica, ja o JavaScrip é uma programação em cima dos elementos e permite aplicar dinamicas aos elementos da página.</p>
+
+<h1>Como incluir os arquivos JavaScrip dentro dos HTML 5.</h1>
+<p>Existe duas forma de vincular o JavaScrip em um arquivo HTML</p>
+  <ol>
+    <li>Atraves de uma abertura direta:
+        <p>"script type="text/javascript""</p>
+        <p>  $(function () {</p>
+        <p>  $('[data-toggle="tooltip"]').tooltip()</p>
+        <p>  $('[data-toggle="popover"]').popover()</p>
+        <p>"/script"</p>
+      <p>Essa abertura ira fazer com que você coloque o script diretamente na mesma pagina do HTML, metodo não recomentedado (script somente para exemplo).</p>
+    </li>
+
+    <li>Atraves de um scrip montado em uma outra página igual o CSS:
+        <p>"script language="javascript" scr=caminho e nome do arquivo.js""</p>
+        <p>"/script"</p>
+    <p>Primeiro defino a linguagem do script e apos o caminho da pasta e do arquivo.js(arquivo sempre na extrenção js) por final fhego a tag.</p>
+    </li>
+  </ol>
+  <p>Esses metodos de inserir o JavaScrip no HTML devem seguir o padrão de serem colocados entre o "head" "/head"</p>
+
+<h1>Comenta os script</h1>
+  <p>Comentar os codigos é muito importante, para conseguir se localizar e saber para que server aquelas linhas de comando, ainda mais quando estiver montas um projeto em equipe, serve tambem para conseguir acompnhar o comportamento dos codgios sem aquelas devidas linhas.</p>
+    <ol>
+      <li>// serve para comentear uma unica linha</li>
+      <li>/* */ serve para comentar o inico e o fim de vairas linhas</li>
+    </ol>
+
+<h1>Variaveis</h1>
+ <p>São endereços de memorias, que possibilitam armazenar dados de maneira temporarias, funcionam como repositorios, armazenando informações, e a partir do nome da variavel conseguimos, recuperar os dados da mesma, a baixo segue os tipos de variaveis</p>
+<p>
+  <ol>
+    <li>"int" vaiavel que serve para armazenar valores numericos interios tando positivo qunado negativo ex: 1, -5, 12..</li>
+    <li>"float" vaiavel que serve para armazenar valores numericos quebrados tando positivo qunado negativo ex: 1.05, -15.67..</li>
+    <li>"string" variavel que armazena valores de caracteres ex: letras, palavras,frases..</li>
+    <li>"boolean" serve para armazenar condições, uma variavel bem restrita e usada situacioanalmente ex: sim/nao, false/true..</li>
+ </ol>
+</p>
+<p>Algumas regras para utiliza as variaveis:</p>
+<ol>
+  <li>Não pode iniciar com numeros, apenas com letras e "_".</li>
+  <li>Não pode ser utiliza caracteres especiarias como "ç" "~" "^".</li>
+  <li>Não pode ser iguais as palavras reservadas a linguagem.</li>
+</ol>
+<p>Sempre quando for utilizar uma variavel colocar antes a palavra "var" para que o interpretador do JavaScrip saiba que aquilo se trata de uma variavel, NÃO é obrigatorio, porem é altamente indicado.</p>
+<p>Alguens exemplo de sintax:</p>
+<ul>
+  <li style="color: green;">var audio</li>
+  <li style="color: green;">var Audio</li>
+  <li style="color: green;">var AUDIO</li>
+  <li style="color: green;">var _AudioAudio</li>
+  <li style="color: green;">var audio123</li>
+  <li style="color: red;">var 123audio</li>
+  <li style="color: red;">var aúdio</li>
+</ul>
+<p>Sintax completa:</p>
+  <ul>
+    <li>  <span style="color: blue;">var</span>
+          <span style="color: green;"> teste</span>
+          <span style="color: red;"> = </span>"text"
+    </li><BR>
+    <li style="color: blue;">DEFINE A VAIRAVEL.</li>
+    <li style="color: green;">DEFINE A REFERENCIA (O NEME COMO ELA VAI CHAMAR) SEMPRE SEGUNDO OS PADROES CIMA.</li>
+    <li style="color: red;">SERVE PARA SEPRAR O NOME DO VALOR DA VARIAVEL.</li>
+    <li>VALOR DA VARIAVEL, NÃO PRECISO ESECIFICA QUAL DAS VARIAVEIS IRA SER, POR O JS JA RECONHECE QUAL TEM QUE UILIZAR.</li>
+  </ul>
+<p>OBS: tipagem da "var" sempre é definida ao valor atribuido a ela.</p>
+<p>Tres formas basicas de representar as informações salvas serias atrasves de:</p>
+  <ol>
+    <li>"alert(nome);" Abre uma caixa de mensagem no navegador.</li>
+    <li>"document.write(nome);" Coloca a informção na pagina, pode utilizar algumas tags HTML e CSS dentro desse codigo.</li>
+    <li>"console.log(nome);" Coloca a informação no console do navegador.</li>
+  </ol>
+
+<h1>Concatenação</h1>
+<p>Nada mais é do que juntar informações em uma unica string, um unico conjunto de caracteres, muito utilizado em mensagens dinamicas dentro de um sistema, e é realizado pelo sinal "+".</p>
+<p>Dentro de uma var tambem é possivel utiliza o camando "prompt" para fazer o navegar pegar uma informação atravez da caixa de aviso.</p>
+
+<h1>Arrays basico</h1>
+<p>São lista ordenadas. Ordenado por variaveis que permite relacionar itens, identifica qual a possição de cada elemnto na lista. Serve basicamente para criar uma lista de cidades por exemplo sem precisar ter uma variavel pra cada cidade.</p>
+<p>Exemplo de sintax:</p>
+<table>
+  <tr>
+    <td>Utilizando Variaveis</td>
+    <td style="width: 30px;"> </td>
+    <td>Utilizando Array normal</td>
+    <td style="width: 30px;"> </td>
+    <td>Utilizando Array em [ ]</td>
+
+  </tr>
+  <tr>
+    <td></td>
+    <td style="width: 30px;"> </td>
+    <td><span style="color: blue;">var </span>cidade <span style="color: red;">=
+    </span> <span style="color: blue;">Array();</span></td><td style="width: 30px;"> </td>
+    <td><span style="color: blue;">var </span>cidade <span style="color: red;">=
+    </span> <span style="color: blue;">[ ];</span></td>
+  </tr>
+  <tr>
+    <td><span style="color: blue;">var </span>cidade_01 <span style="color: red;">=</span> "Limeira";</td><td style="width: 10px;"> </td>
+    <td><span style="color: blue;">var </span>cidade<span style="color: green;">
+    [1] </span><span style="color: red;">=</span> "Limeira";</td>
+    <td style="width: 30px;"> </td>
+    <td><span style="color: blue;">var </span>cidade<span style="color: green;">
+    [1] </span><span style="color: red;">=</span> "Limeira";</td>
+  </tr>
+  <tr>
+    <td><span style="color: blue;">var </span>cidade_02 <span style="color: red;">=</span> "Campinas";</td><td style="width: 10px;"> </td>
+    <td><span style="color: blue;">var </span>cidade<span style="color: green;">
+    [2] </span><span style="color: red;">=</span> "Campinas";</td>
+    <td style="width: 30px;"> </td>
+    <td><span style="color: blue;">var </span>cidade<span style="color: green;">
+    [2] </span><span style="color: red;">=</span> "Campinas";</td>
+  </tr>
+  <tr>
+    <td><span style="color: blue;">var </span>cidade_03 <span style="color: red;">=</span> "Araras";</td><td style="width: 10px;"> </td>
+    <td><span style="color: blue;">var </span>cidade<span style="color: green;">
+    [3] </span><span style="color: red;">=</span> "Araras";</td>
+    <td style="width: 30px;"> </td>
+    <td><span style="color: blue;">var </span>cidade<span style="color: green;">
+    [3] </span><span style="color: red;">=</span> "Araras";</td>
+  </tr>
+  <tr>
+    <td><span style="color: blue;">var </span>cidade_04 <span style="color: red;">=</span> "Leme";</td><td style="width: 10px;"> </td>
+    <td><span style="color: blue;">var </span>cidade<span style="color: green;">
+    [4] </span><span style="color: red;">=</span> "Leme";</td>
+    <td style="width: 30px;"> </td>
+    <td><span style="color: blue;">var </span>cidade<span style="color: green;">
+    [4] </span><span style="color: red;">=</span> "Leme";</td>
+
+  </tr>
+  <tr>
+    <td><span style="color: blue;">var </span>cidade_05 <span style="color: red;">=</span> "Pires";</td><td style="width: 10px;"> </td>
+    <td><span style="color: blue;">var </span>cidade<span style="color: green;">
+    [5] </span><span style="color: red;">=</span> "Pires";</td>
+    <td style="width: 30px;"> </td>
+    <td><span style="color: blue;">var </span>cidade<span style="color: green;">
+    [5] </span><span style="color: red;">=</span> "Pires";</td>
+    
+  </tr>
+</table>
+<p>Como mostrado a cima o Array pode ser simbolizado pela propria palavra "Array ou pelo simbolo "[ ]". E a principal função é servir para não ter o trabalho de definir uma variavel para cada elemente armazenado, simplesmente se cria um array, que tambem pode ser escrito com a segunte sintax.</p>
+<p><span style="color: blue;">var </span>cidade <span style="color: red;">=
+</span> <span style="color: blue;">Array</span>( "Limeira", "Campinas", "Araras", "Lema", "Pires");</p>
+<p>Dessa forma a primeira informação armazena se toma com posição 0 e as demais segue em sequencia. A maior diferença de tipo lista para o tipo em sequencia é que, no tipo lista eu poso escolher qual o valor da ordem, ja no em lista segue um sequencia predefinida.</p>
+
+<h1>Array multidimencionais</h1>
+<p>Segue a mesma ideologia de lista, porem com um diferencial, que seria, poder criar lista dentro de outras listas.</p>
+<p><span style="color: blue;">var </span><span style="color:green;">lista_coisas
+</span><span style="color: red;"> = </span><span style="color: blue;">Array();</span></p>
+<br>
+<p><span style="color: green;">lista_coisas</span><span style="color: blue;">["frutas"]
+</span><span style="color: red;"> = </span><span style="color: blue;">Array();</span></p>
+<p><span style="color: green;">lista_coisas</span><span style="color: blue;">["carros"]
+</span><span style="color: red;"> = </span><span style="color: blue;">Array();</span></p>
+<br>
+<p><span style="color: green;">lista_coisas</span><span style="color: blue;">["frutas"]
+</span><span style="color: purple;">[1]</span>
+<span style="color: red;"> = </span>"banana";</p>
+<p><span style="color: green;">lista_coisas</span><span style="color: blue;">["frutas"]
+</span><span style="color: purple;">[2]</span>
+<span style="color: red;"> = </span>"batata";</p>
+<p><span style="color: green;">lista_coisas</span><span style="color: blue;">["frutas"]
+</span><span style="color: purple;">[3]</span>
+<span style="color: red;"> = </span>"cenoura";</p>
+<p><span style="color: green;">lista_coisas</span><span style="color: blue;">["frutas"]
+</span><span style="color: purple;">[4]</span>
+<span style="color: red;"> = </span>"manga";</p>
+<br>
+<p><span style="color: green;">lista_coisas</span><span style="color: blue;">["carro"]
+</span><span style="color: purple;">[1]</span>
+<span style="color: red;"> = </span>"fusca";</p>
+<p><span style="color: green;">lista_coisas</span><span style="color: blue;">["carro"]
+</span><span style="color: purple;">[2]</span>
+<span style="color: red;"> = </span>"gol";</p>
+<p><span style="color: green;">lista_coisas</span><span style="color: blue;">["carro"]
+</span><span style="color: purple;">[3]</span>
+<span style="color: red;"> = </span>"celta";</p>
+<p><span style="color: green;">lista_coisas</span><span style="color: blue;">["carro"]
+</span><span style="color: purple;">[4]</span>
+<span style="color: red;"> = </span>"corsa";</p>
+<br>
+<h1>Introdução "if" e "else"</h1>
+<p> São um estrutura de controle, define de acordo com a condição que for encirido nela, qual o direcionamento que uma estrutura vai tomar, essas condições seria "verdadeira" ou "falso". As condições são definidas atraves dos "operadores de condições", são nada mais do que, "perguntas" com respostas sim ou não, são no totais 9 operadores de condições:</p>
+<table border="0">
+  <tr align="center">
+    <td style="width: 150px;">Operador</td>
+    <td style="width: 200px;">Nome</td>
+    <td>Função</td> 
+  </tr>
+  <tr>
+    <td style="color: blue;">==</td>
+    <td>Igual</td>
+    <td>Valores são iguais ?</td>
+  </tr>
+  <tr>
+    <td style="color: blue;">===</td>
+    <td>Identico</td>
+    <td>Valores são iguaise do mesmo tipo ?</td>
+  </tr>
+  <tr>
+    <td style="color: blue;">!=</td>
+    <td>Diferente</td>
+    <td>Valores são diferentes ?</td>
+  </tr>
+  <tr>
+    <td style="color: blue;"><></td>
+    <td>Diferente</td>
+    <td>Valores são diferentes ?</td>
+  </tr>
+  <tr>
+    <td style="color: blue;">!==</td>
+    <td>Não identico</td>
+    <td>Valores são diferentes e ou de tipos diferentes ?</td>
+  </tr>
+  <tr>
+    <td style="color: blue;"><</td>
+    <td>Menor que</td>
+    <td>Valor da esquerda é menor  que valor da direita ?</td>
+  </tr>
+  <tr>
+    <td style="color: blue;">></td>
+    <td>Maior que</td>
+    <td>Valor da esquerda é maior que valor da direita ?</td>
+  </tr>
+  <tr>
+    <td style="color: blue;"><=</td>
+    <td>Menor ou igual</td>
+    <td>Valor da esqueda é menor ou igual ao valor da direita ?</td>
+  </tr>
+  <tr>
+    <td style="color: blue;">=></td>
+    <td>Maior ou igual</td>
+    <td>Valor da esqueda é maior ou igual ao valor da direita ?</td>
+  </tr>
+</table>
+<div style="background-color: black;">
+<table>
+  <tr>
+    <td style="width: 160px; background-color: black;">.</td>
+    <td style="width: 160px; background-color: black;"></td>
+    <td style="width: 160px; background-color: black;"></td>
+  </tr>
+  <tr>
+    <td style="width: 160px; background-color: black;"></td>
+    <td style="width: 180px; background-color: black;"><span style="color: red;">if</span><span style="color: blue;">(2 != 1)</span><span style="color: orange;">{</span>
+    </td>
+    <td style="width: 160px; background-color: black;"></td>
+  </tr>
+  <tr>
+    <td style="width: 160px; background-color: black;"></td>
+    <td style="width: 250px; background-color: black;"><span style="color: rgb(0, 255, 242);">document.write</span><span style="color: green">("verdadeiro");</span></td>
+    <td style="width: 160px; background-color: black;"></td>
+  </tr>
+  <tr>
+    <td style="width: 160px; background-color: black;"></td>
+    <td style="width: 160px; background-color: black;"><span style="color: orange;">}</span><span style="color: red;"> else </span><span style="color: orange;">{</span></td>
+    <td style="width: 160px; background-color: black;"></td>
+  </tr>
+  <tr>
+    <td style="width: 160px; background-color: black;"></td>
+    <td style="width: 250px; background-color: black;"><span style="color: rgb(0, 255, 242);">document.write</span><span style="color: green">("false");</span></td>
+    <td style="width: 160px; background-color: black;"></td>
+  </tr>
+  <tr>
+    <td style="width: 160px; background-color: black;"></td>
+    <td style="width: 160px; background-color: black;"><span style="color: orange;">}</span></td>
+    <td style="width: 160px; background-color: black;"></td>
+  </tr>
+  <tr>
+    <td style="width: 160px; background-color: black;"> .</td>
+    <td style="width: 160px; background-color: black;"></td>
+    <td style="width: 160px; background-color: black;"></td>
+  </tr>
+</table>
+</div>
+<p>O "if" basicamente seria um pergunta se a respota for positiva de acordo com o operador ele executa um bloco de comando, e a resposta for negativa vai para o proximo que no caso seria o "else" ee executa o bloco de codigo que esta dentro dele. Sintax a baixo:</p>
+<p>exemplo simples de como utilizar uma sintax de if e else.</p>
+<p>Temos tambem "operadores logicos", que nada mais é doque operadores que nos permite junta "operador de compração", entao cada operação de compração resulta em valor "true" ou "false" e com o "operador logico" pode ser juntado o resultado de duas ou mais condições dessa forma possibilitando diversos resultador e caminhos.</p>
+<table border="0">
+  <tr align="center">
+    <td style="width: 150px;">Operador</td>
+    <td style="width: 200px;">Nome</td>
+    <td>Função</td> 
+  </tr>
+  <tr>
+    <td style="color: red;">&&</td>
+    <td>E</td>
+    <td>verdadeiro se todas expresões forem verdadeira</td>
+  </tr>
+  <tr>
+    <td style="color: red;">||</td>
+    <td>Ou</td>
+    <td>verdadeiro se pelo menos ums das expresões forem verdadeira</td>
+  </tr>
+  <tr>
+    <td style="color: red;">!</td>
+    <td>Negação</td>
+    <td>inverte o resultado das expresões</td>
+  </tr>
+</table>
+<div style="background-color: black;">
+  <table>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td style="width: 160px; background-color: black;"></td>
+      <td style="width: 160px; background-color: black;"></td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;"></td>
+      <td style="width: 180px; background-color: black;"><span style="color: red;">if</span><span style="color: blue;">(2 != 1 && 5 < 9)</span><span style="color: orange;">{</span>
+      </td>
+      <td style="width: 160px; background-color: black;"></td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;"></td>
+      <td style="width: 250px; background-color: black;"><span style="color: rgb(0, 255, 242);">document.write</span><span style="color: green">("verdadeiro");</span></td>
+      <td style="width: 160px; background-color: black;"></td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;"></td>
+      <td style="width: 160px; background-color: black;"><span style="color: orange;">}</span><span style="color: red;"> else </span><span style="color: orange;">{</span></td>
+      <td style="width: 160px; background-color: black;"></td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;"></td>
+      <td style="width: 250px; background-color: black;"><span style="color: rgb(0, 255, 242);">document.write</span><span style="color: green">("false");</span></td>
+      <td style="width: 160px; background-color: black;"></td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;"></td>
+      <td style="width: 160px; background-color: black;"><span style="color: orange;">}</span></td>
+      <td style="width: 160px; background-color: black;"></td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;"> .</td>
+      <td style="width: 160px; background-color: black;"></td>
+      <td style="width: 160px; background-color: black;"></td>
+    </tr>
+  </table>
+  </div>
+<h1>Switch</h1>
+<p>Ele é praticamente igual o "if" porem é escrito de uma maneira diferente, a forma de se usar ele é mais restrita pois se utiliza mais como formas de comprações e ingualdades. Funciona da seguinte forma, temos o switch que ira ser vinculado ao atributo de alguma variavel, dependendo o condição que retornar, ele ira escolher um caminho, um "case" e dentro deste "case" ira ter os camando a ser seguido, sempre para encerrar o case é nescessario, um "break", esse "break" não é obrigatorio porem se não tiver ele ira executar todas "case" a partir da qual foi selecionada pela variavel, se por acaso nenhuma opção de variavel existir, ser executado o "default", ultima opção de "case" e caso não tenha "default" nao ira executar Nada. Exemplo de sintax a baixo:</p>
+<div style="background-color: black;">
+  <table>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td style="width: 500px; background-color: black;"></td>
+      <td style="width: 160px; background-color: black;"></td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td><span style="color: rgb(0, 225, 255);">var </span><span style="color: rgb(255, 255, 255);">(opcao)</span><span style="color: red;"> = </span><span style="color: green;">1;</span></td>     
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td style="width: 160px; background-color: black;"></td>
+      <td style="width: 160px; background-color: black;"></td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td><span style="color: red;">switch</span><span style="color: rgb(255, 255, 255);">
+      (opcao)</span><span style="color: yellow;">{</span></td>
+        <td style="width: 160px; background-color: black;">.</td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td><span style="color: red;">case </span><span style="color: purple;"> 1</span><span style="color: green;">;</span></td>
+      <td style="width: 160px; background-color: black;">.</td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td><span style="color: rgb(0, 225, 255);">document.write</span><span style="color: rgb(255, 255, 255);">("opçao 1")</span><span style="color: green;">;</span></td>
+        <td style="width: 160px; background-color: black;">.</td>
+    </tr>
+    <tr>
+    <td style="width: 160px; background-color: black;">.</td>
+    <td><span style="color: red;">break</span><span style="color: green;">;</span></td>
+      <td style="width: 160px; background-color: black;">.</td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td><span style="color: red;">case </span><span style="color: purple;"> 2</span><span style="color: green;">;</span></td>
+      <td style="width: 160px; background-color: black;">.</td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td><span style="color: rgb(0, 225, 255);">document.write</span><span style="color: rgb(255, 255, 255);">("opçao 2")</span><span style="color: green;">;</span></td>
+        <td style="width: 160px; background-color: black;">.</td>
+    </tr>
+    <tr>
+    <td style="width: 160px; background-color: black;">.</td>
+    <td><span style="color: red;"></span><span style="color: green;"></span></td>
+      <td style="width: 160px; background-color: black;">.</td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td><span style="color: red;">case </span><span style="color: purple;"> 3</span><span style="color: green;">;</span></td>
+      <td style="width: 160px; background-color: black;">.</td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td><span style="color: rgb(0, 225, 255);">document.write</span><span style="color: rgb(255, 255, 255);">("opçao 3")</span><span style="color: green;">;</span></td>
+        <td style="width: 160px; background-color: black;">.</td>
+    </tr>
+    <tr>
+    <td style="width: 160px; background-color: black;">.</td>
+    <td><span style="color: red;">break</span><span style="color: green;">;</span></td>
+      <td style="width: 160px; background-color: black;">.</td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td><span style="color: red;">default </span><span style="color: purple;"> </span><span style="color: green;">;</span></td>
+      <td style="width: 160px; background-color: black;">.</td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td><span style="color: rgb(0, 225, 255);">document.write</span><span style="color: rgb(255, 255, 255);">("opçao invalido")</span><span style="color: green;">;</span></td>
+        <td style="width: 160px; background-color: black;">.</td>
+    </tr>
+    <tr>
+    <td style="width: 160px; background-color: black;">.</td>
+    <td><span style="color: red;">break</span><span style="color: green;">;</span></td>
+      <td style="width: 160px; background-color: black;">.</td>
+    </tr>
+    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td><span style="color: yellow;">}</span></td>
+        <td style="width: 160px; background-color: black;">.</td>
+    </tr>    <tr>
+      <td style="width: 160px; background-color: black;">.</td>
+      <td style="width: 500px; background-color: black;"></td>
+      <td style="width: 160px; background-color: black;"></td>
+    </tr>
+  </table>
+</div>
+<h1>O peradores aritmeticos</h1>
+<p>São operadores que permiten realizar calculos basicos, exitem no total 9 operadores, segue a baixo:</p>
+<table border="0">
+  <tr align="center">
+    <td style="width: 150px;">Operador</td>
+    <td style="width: 200px;">Nome</td>
+    <td>Função</td> 
+  </tr>
+  <tr>
+    <td style="color: blue;">+</td>
+    <td>Adção</td>
+    <td>Soma valores</td>
+  </tr>
+  <tr>
+    <td style="color: blue;">-</td>
+    <td>Subtração</td>
+    <td>Diferença entre valores</td>
+  </tr>
+  <tr>
+    <td style="color: blue;">*</td>
+    <td>Multiplicação</td>
+    <td>Produto dos valores</td>
+  </tr>
+  <tr>
+    <td style="color: blue;">/</td>
+    <td>DIvisão</td>
+    <td>Quociente dos valores</td>
+  </tr>
+  <tr>
+    <td style="color: blue;">%</td>
+    <td>Módulo</td>
+    <td>Resto existente em uma operação de divisão</td>
+  </tr>
+  <tr>
+    <td style="color: blue;">++</td>
+    <td>Incremento</td>
+    <td>Pré/ pos incremento</td>
+  </tr>
+  <tr>
+    <td style="color: blue;">--</td>
+    <td>Decremento</td>
+    <td>Pré/ pos decremento</td>
+  </tr> 
+</table>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
